@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { ArrowDown, Github, Twitter, Linkedin, Instagram, Mail } from 'lucide-react';
 import avatar from '../assets/avatar.svg';
 import { useNavigate } from 'react-router-dom';
@@ -6,22 +6,28 @@ import resume from '../assets/resume/muhammad-alif-islam-resume.pdf';
 
 const Home = () => {
   const [displayText, setDisplayText] = useState('');
-  const fullText = 'FULL-STACK DEVELOPER';
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const texts = useMemo(() => ['FULL-STACK DEVELOPER', 'MOBILE DEVELOPER', 'WEB3 DEVELOPER'], []);
   const navigate = useNavigate();
   
   useEffect(() => {
     let currentIndex = 0;
+    const currentText = texts[currentTextIndex];
+    
     const timer = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setDisplayText(fullText.slice(0, currentIndex));
+      if (currentIndex <= currentText.length) {
+        setDisplayText(currentText.slice(0, currentIndex));
         currentIndex++;
       } else {
-        currentIndex = 0;
+        setTimeout(() => {
+          currentIndex = 0;
+          setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+        }, 1000);
       }
     }, 150);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [currentTextIndex, texts]);
 
   const scrollToIntroduction = () => {
     document.getElementById('introduction-section')?.scrollIntoView({ behavior: 'smooth' });
