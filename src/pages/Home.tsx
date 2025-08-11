@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { ArrowDown, Github, Twitter, Linkedin, Instagram, Mail } from 'lucide-react';
 import avatar from '../assets/avatar.svg';
 import { useNavigate } from 'react-router-dom';
-import resume from '../assets/resume/muhammad-alif-islam-resume.pdf';
+import resume from '../assets/resume/muhammad_alif_islam_cv.pdf';
 
 const Home = () => {
   const [displayText, setDisplayText] = useState('');
