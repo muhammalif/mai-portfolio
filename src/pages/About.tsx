@@ -1,5 +1,5 @@
 import TechStack from '../components/TechStack';
-import resume from '../assets/resume/muhammad-alif-islam-resume.pdf';
+import resume from '../assets/resume/muhammad_alif_islam_cv.pdf';
 
 const About = () => {
 
