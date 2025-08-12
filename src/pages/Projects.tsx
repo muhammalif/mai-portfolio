@@ -29,7 +29,7 @@ const Projects = () => {
   const web2Projects: Project[] = [
     {
       title: 'GUESS THE NUMBER',
-      description: 'An interactive number guessing game with a modern UI. Features include difficulty levels, score tracking, and responsive design for all devices.',
+      description: 'An interactive number guessing game with a modern UI. Features include difficulty levels, leaderboard.',
       image: gtnImage,
       tech: ['React.js', 'TypeScript', 'Python', 'Flask', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
       color: 'bg-neon-yellow',
@@ -94,10 +94,10 @@ const Projects = () => {
 
   const mobileProjects: Project[] = [
     {
-      title: 'FINLY APP',
+      title: 'FINLY',
       description: 'A mobile finance management application that helps users track expenses, set budgets, and achieve financial goals with an intuitive interface.',
       image: finlyImage,
-      tech: ['React Native', 'TypeScript', 'Redux Toolkit', 'Node.js', 'Express.js', 'MongoDB'],
+      tech: ['React Native', 'TypeScript', 'AyncStorage', 'SQLite', ],
       color: 'bg-neon-purple',
       icon: Smartphone,
       demo: '#',
