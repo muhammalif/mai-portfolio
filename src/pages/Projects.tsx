@@ -1,4 +1,5 @@
 import { Github, ExternalLink, Globe, Code, Smartphone } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -19,86 +20,7 @@ interface Project {
   image: string;
   tech: string[];
   color: string;
-  icon: any;
-  demo: string;
-  github: string;
-}
-
-const Projects = () => {
-  const web2Projects: Project[] = [
-    {
-      title: 'GUESS THE NUMBER',
-      description: 'An interactive number guessing game with a modern UI. Features include difficulty levels, score tracking, and responsive design for all devices.',
-      image: gtnImage,
-      tech: ['React.js', 'TypeScript', 'Python', 'Flask', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
-      color: 'bg-neon-yellow',
-      icon: Smartphone,
-      demo: 'https://guess-the-number-indol-ten.vercel.app/game',
-      github: 'https://github.com/muhammalif/guess-the-number'
-    },
-    {
-      title: 'FXDRAGUNOV INDONESIA',
-      description: 'FXDragunov is an educational platform and forex trading tool designed to help traders analyze the market and make better decisions.',
-      image: fxdImage,
-      tech: ['React.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'ShadcnUI'],
-      color: 'bg-neon-pink',
-      icon: Globe,
-      demo: 'https://fxdragunov.vercel.app/',
-      github: 'https://github.com/muhammalif/fxdragunov'
-    },
-    {
-      title: 'ECHOGEAR STORE',
-      description: 'An e-commerce platform specializing in audio equipment and accessories. Features include product filtering, user reviews, and secure payment integration.',
-      image: echogearImage,
-      tech: ['React.js', 'Tailwind CSS'],
-      color: 'bg-neon-green',
-      icon: Globe,
-      demo: 'https://echo-gear-store.vercel.app/',
-      github: 'https://github.com/muhammalif/react-projects-echo-gear-store'
-    },
-    {
-      title: 'FILAGROWTH',
-      description: 'Filagrowth is a website development, mobile application, and Web3 solution service that focuses on modern, functional, and innovative digital products.',
-      image: filagrowthImage,
-      tech: ['React.js', 'TypeScript', 'Tailwind CSS', 'ShadcnUI'],
-      color: 'bg-neon-green',
-      icon: Globe,
-      demo: 'https://filagrowth.vercel.app/',
-      github: 'https://github.com/muhammalif/filagrowth'
-    }
-  ];phone } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import '../styles/swiper.css';
-import droppioImage from '../assets/projects/droppio.jpg';
-import dwalletImage from '../assets/projects/dwallet.jpg';
-import gtnImage from '../assets/projects/gtn.jpg';
-import fxdImage from '../assets/projects/fxd.jpg';
-import echogearImage from '../assets/projects/echogear.jpg';
-import filagrowthImage from '../assets/projects/filagrowth.jpg';
-import finlyImage from '../assets/projects/finly.png';
-
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  tech: string[];
-  color: string;
-  icon: any;
-  demo: string;
-  github: string;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  tech: string[];
-  color: string;
-  icon: any;
+  icon: LucideIcon;
   demo: string;
   github: string;
 }
@@ -147,7 +69,7 @@ const Projects = () => {
     }
   ];
 
-  const web3Projects = [
+  const web3Projects: Project[] = [
     {
       title: 'DROPPIO NETWORK',
       description: 'Web3 platform that lets you support content creators with tips and earn exclusive badges through blockchain technology.',
@@ -170,7 +92,7 @@ const Projects = () => {
     }
   ];
 
-  const mobileProjects = [
+  const mobileProjects: Project[] = [
     {
       title: 'FINLY APP',
       description: 'A mobile finance management application that helps users track expenses, set budgets, and achieve financial goals with an intuitive interface.',
@@ -182,59 +104,8 @@ const Projects = () => {
       github: 'https://github.com/muhammalif/finly-app'
     }
   ];
-    {
-      title: 'DWALLET TRACKER',
-      description: 'A cryptocurrency wallet tracker and portfolio management application. Monitor your crypto assets, track transactions, and analyze market trends in real-time.',
-      image: dwalletImage,
-      tech: ['React.js', 'TypeScript', 'Solidity', 'Tailwind CSS', 'Etherscan API', 'Wallet Integration'],
-      color: 'bg-neon-cyan',
-      icon: Code,
-      demo: 'https://dwallet-tracker.netlify.app/',
-      github: 'https://github.com/muhammalif/dwallet-tracker'
-    },
-    {
-      title: 'GUESS THE NUMBER',
-      description: 'An interactive number guessing game with a modern UI. Features include difficulty levels, score tracking, and responsive design for all devices.',
-      image: gtnImage,
-      tech: ['React.js', 'TypeScript', 'Python', 'Flask', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
-      color: 'bg-neon-yellow',
-      icon: Smartphone,
-      demo: 'https://guess-the-number-indol-ten.vercel.app/game',
-      github: 'https://github.com/muhammalif/guess-the-number'
-    },
-    {
-      title: 'FXDRAGUNOV INDONESIA',
-      description: 'FXDragunov is an educational platform and forex trading tool designed to help traders analyze the market and make better decisions.',
-      image: fxdImage,
-      tech: ['React.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'ShadcnUI'],
-      color: 'bg-neon-pink',
-      icon: Globe,
-      demo: 'https://fxdragunov.vercel.app/',
-      github: 'https://github.com/muhammalif/fxdragunov'
-    },
-    {
-      title: 'ECHOGEAR STORE',
-      description: 'An e-commerce platform specializing in audio equipment and accessories. Features include product filtering, user reviews, and secure payment integration.',
-      image: echogearImage,
-      tech: ['React.js', 'Tailwind CSS'],
-      color: 'bg-neon-green',
-      icon: Globe,
-      demo: 'https://echo-gear-store.vercel.app/',
-      github: 'https://github.com/muhammalif/react-projects-echo-gear-store'
-    },
-    {
-      title: 'FILAGROWTH',
-      description: 'Filagrowth is a website development, mobile application, and Web3 solution service that focuses on modern, functional, and innovative digital products.',
-      image: filagrowthImage,
-      tech: ['React.js', 'TypeScript', 'Tailwind CSS', 'ShadcnUI'],
-      color: 'bg-neon-green',
-      icon: Globe,
-      demo: 'https://filagrowth.vercel.app/',
-      github: 'https://github.com/muhammalif/filagrowth'
-    }
-  ];
 
-  const ProjectCard = ({ project }) => (
+  const ProjectCard = ({ project }: { project: Project }) => (
     <div className="brutal-card bg-white group">
       <div className="relative overflow-hidden">
         <img 
@@ -287,7 +158,7 @@ const Projects = () => {
     </div>
   );
 
-  const ProjectSection = ({ title, description, projects }) => (
+  const ProjectSection = ({ title, description, projects }: { title: string, description: string, projects: Project[] }) => (
     <div className="mb-20">
       <h3 className="text-4xl font-black mb-4">{title}</h3>
       <p className="text-lg font-bold mb-8">{description}</p>
@@ -351,4 +222,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
