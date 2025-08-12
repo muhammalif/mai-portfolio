@@ -29,7 +29,7 @@ const Projects = () => {
   const web2Projects: Project[] = [
     {
       title: 'GUESS THE NUMBER',
-      description: 'An interactive number guessing game with a modern UI. Features include difficulty levels, leaderboard.',
+      description: 'An interactive number guessing game with a modern UI. Features include difficulty levels, and leaderboard.',
       image: gtnImage,
       tech: ['React.js', 'TypeScript', 'Python', 'Flask', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
       color: 'bg-neon-yellow',
